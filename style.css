@@ -1,0 +1,461 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --disnenyColor:#0c111b;
+}
+
+body{
+    background-color: var(--disnenyColor);
+    width: 100%;
+    position: relative;
+    font-family: roboto,sans-serif;
+}
+
+.navbar{
+    width: 100%;
+    height: 80px;
+    padding: 0 4%;
+    /* background-color: red; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    z-index: 9;
+    background-color: var(--disnenyColor);
+}
+
+.navbar .brand-logo{
+    height: 65px;
+}
+
+.nav-links{
+    margin-top: 25px;
+    list-style: none;
+    display: flex;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    text-transform: capitalize;
+    opacity: 0.9;
+}
+
+.right-container{
+    margin-top: 25px;
+    margin-left: auto;
+    display: block;
+}
+
+.right-container .search-box{
+    width: 250px;
+    height: 20px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 1px solid #aaa;
+    color: white;
+    transition: .5s;
+}
+
+.search-box:focus{
+    width: 300px;
+    border-color: #1f80e0;
+}
+
+.sub-btn{
+    height: 30px;
+    padding: 0 20px;
+    background-color: #1f80e0;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 12px;
+    margin: 0 10px;
+}
+
+.login-btn{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.sliderBox-container{
+    width: 100%;
+    height: 500px;
+    padding: 20px 0 ;
+    overflow-x: hidden;
+    margin-top: 80px;
+    position: relative;
+}
+
+ .sliderBox{
+    display: flex ;
+    position: relative;
+    width: 97%;
+    height: 100%;
+    margin: auto;
+}
+
+.sliderBox .slide{
+    flex: 0 0 auto;
+    margin-right: 30px;
+    position: relative;
+    background-color: rgba(214, 10, 10, 0.5);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.slide img{
+    width: 70%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin-left: auto;
+}
+
+.slide-content{
+    color: white;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(to right, #030b17 80%,#0c111b00);
+}
+
+.movie-tittle{
+    padding-left: 50px;
+    text-transform: capitalize;
+    margin-top: 80px;
+}
+
+.movie-desc{
+    padding-left: 50px;
+    width: 80%;
+    line-height: 30px;
+    margin-top: 30px;
+    opacity: 0.8;
+}
+
+.video-container{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    height: 10vw;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.video-card{
+    position: relative;
+    min-width: calc(100%/5 - 20px);
+    width: calc(100%/4.3 - 14px);
+    height: 100%;
+    border-radius: 5%;
+    overflow: hidden;
+    background-color: #030b17;
+}
+
+.videocard-image,.card-video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-video{
+    position: absolute;
+}
+
+.video-card:hover .videocard-image{
+    display: none;
+}
+
+.tittle{
+    padding-left: 2%;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 600;
+    opacity: 0.9;
+    font-size: 22px;
+}
+
+.movie-list{
+    width: 100%;
+    height: 220px;
+    position: relative;
+    margin: 10px 0 20px;
+}
+
+.card-container{
+    width: 97%;
+    height: 220px;
+    padding-left: 10px;
+    margin: 0 auto;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: smooth;
+    scroll-behavior: smooth;
+}
+
+.card-container::-webkit-scrollbar{
+    display: none;
+}
+
+.card{
+    position: relative;
+    min-width: 140px;
+    width: 120px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px;
+    transition: .5s;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card:hover .card-body{
+    opacity: 1;
+    top: 0;
+}
+
+.card-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(4,8,15,0), #192133 90%);
+    padding: 10px;
+    transition: .5s;
+}
+
+.name{
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-top: 60%;
+}
+
+.desc{
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 5px 0;
+    opacity: 0.8;
+}
+
+.watchlist-btn{
+    position: relative;
+    width: 100%;
+    text-transform: capitalize;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    padding: 10px 8px 10px 15px;
+    background-color: transparent;
+    color: white;
+    text-align: right;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+
+}
+
+.watchlist-btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -7px;
+    background-image: url(images/add.png);
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    transform: scale(0.4);
+}
+
+.watchlist-btn:hover{
+    background: rgba(255,255,255,0.1);
+}
+
+.pre-btn,.next-btn{
+    position: absolute;
+    top: 0;
+    width: 4%;
+    height: 100%;
+    z-index: 2;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.pre-btn{
+    left: 0;
+    /* left: -10px; */
+
+    background: linear-gradient(to right, #0c111b 0%, #00040b00);
+}
+
+.next-btn{
+    right: 0;
+    background: linear-gradient(to left, #0c111b 0%, #0c111b00);
+}
+
+.pre-btn img, .next-btn img{
+    width: 15px;
+    height: 20px;
+    opacity: 0;
+}
+
+.pre-btn:hover img, .next-btn:hover img{
+    opacity: 1;
+}
+
+
+/* add */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Other styles... */
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+  }
+  
+  .nav-item {
+    margin-left: 20px;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none; /* Hide the links on smaller screens */
+    }
+    
+    .right-container {
+      margin-left: 0;
+    }
+  }
+
+  .sliderBox-container {
+    height: 50vh; /* Adjust the height as needed */
+  }
+  
+  .slide {
+    width: 70%; /* Adjust the width as needed */
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .slide {
+      width: 100%; /* Make the slider full-width on smaller screens */
+    }
+    
+    .movie-tittle {
+      font-size: 24px; /* Increase font size for readability on smaller screens */
+    }
+  }
+
+  .card-container {
+    gap: 10px;
+  }
+  
+  .card {
+    width: calc(20% - 10px); /* Adjust the card width and gap as needed */
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .card {
+      width: calc(33.33% - 10px); /* Adjust for smaller screens */
+    }
+    
+    .name {
+      font-size: 16px; /* Increase font size for readability on smaller screens */
+    }
+    
+    .desc {
+      font-size: 14px; /* Increase font size for readability on smaller screens */
+    }
+  }
+  
+  /* Styles for screens up to 320px wide (e.g., small mobile devices) */
+@media (max-width: 320px) {
+    .navbar {
+        height: 50px; /* Adjust navbar height for smaller screens */
+        padding: 0 2%; /* Add some padding to the sides */
+    }
+    
+    .navbar .brand-logo {
+        height: 40px; /* Adjust logo height for smaller screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide the navigation links */
+    }
+
+    .right-container {
+        margin-top: 10px; /* Adjust margin for the right container */
+    }
+
+    .right-container .search-box {
+        width: 80px; /* Adjust search box width */
+        font-size: 12px; /* Adjust font size for readability */
+        position: relative;
+    }
+
+    /* Add more specific styles for smaller screens as needed */
+
+    .sub-btn{
+        padding: 0 5px;
+        position: relative;
+        right: 2%;
+    }
+
+    .login-btn{
+        display: none;
+    }
+
+    .video-container{
+        height: 15vw;
+        padding: 0 10px;
+    }
+
+  
+}
