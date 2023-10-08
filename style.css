@@ -156,7 +156,7 @@ body{
 
 .video-container{
     position: relative;
-    width: 100%;
+    width: 97%;
     margin: auto;
     height: 10vw;
     display: flex;
@@ -166,8 +166,8 @@ body{
 
 .video-card{
     position: relative;
-    min-width: calc(100%/5 - 20px);
-    width: calc(100%/4.3 - 14px);
+    min-width: calc(100%/5 - 10px);
+    width: calc(100%/5 - 10px);
     height: 100%;
     border-radius: 5%;
     overflow: hidden;
@@ -223,7 +223,7 @@ body{
 
 .card{
     position: relative;
-    min-width: 140px;
+    min-width: 160px;
     width: 120px;
     height: 200px;
     border-radius: 10px;
@@ -340,122 +340,4 @@ body{
 
 .pre-btn:hover img, .next-btn:hover img{
     opacity: 1;
-}
-
-
-/* add */
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* Other styles... */
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    margin-left: auto;
-  }
-  
-  .nav-item {
-    margin-left: 20px;
-  }
-  
-  /* Media query for smaller screens */
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none; /* Hide the links on smaller screens */
-    }
-    
-    .right-container {
-      margin-left: 0;
-    }
-  }
-
-  .sliderBox-container {
-    height: 50vh; /* Adjust the height as needed */
-  }
-  
-  .slide {
-    width: 70%; /* Adjust the width as needed */
-  }
-  
-  /* Media query for smaller screens */
-  @media (max-width: 768px) {
-    .slide {
-      width: 100%; /* Make the slider full-width on smaller screens */
-    }
-    
-    .movie-tittle {
-      font-size: 24px; /* Increase font size for readability on smaller screens */
-    }
-  }
-
-  .card-container {
-    gap: 10px;
-  }
-  
-  .card {
-    width: calc(20% - 10px); /* Adjust the card width and gap as needed */
-  }
-  
-  /* Media query for smaller screens */
-  @media (max-width: 768px) {
-    .card {
-      width: calc(33.33% - 10px); /* Adjust for smaller screens */
-    }
-    
-    .name {
-      font-size: 16px; /* Increase font size for readability on smaller screens */
-    }
-    
-    .desc {
-      font-size: 14px; /* Increase font size for readability on smaller screens */
-    }
-  }
-  
-  /* Styles for screens up to 320px wide (e.g., small mobile devices) */
-@media (max-width: 320px) {
-    .navbar {
-        height: 50px; /* Adjust navbar height for smaller screens */
-        padding: 0 2%; /* Add some padding to the sides */
-    }
-    
-    .navbar .brand-logo {
-        height: 40px; /* Adjust logo height for smaller screens */
-    }
-
-    .nav-links {
-        display: none; /* Hide the navigation links */
-    }
-
-    .right-container {
-        margin-top: 10px; /* Adjust margin for the right container */
-    }
-
-    .right-container .search-box {
-        width: 80px; /* Adjust search box width */
-        font-size: 12px; /* Adjust font size for readability */
-        position: relative;
-    }
-
-    /* Add more specific styles for smaller screens as needed */
-
-    .sub-btn{
-        padding: 0 5px;
-        position: relative;
-        right: 2%;
-    }
-
-    .login-btn{
-        display: none;
-    }
-
-    .video-container{
-        height: 15vw;
-        padding: 0 10px;
-    }
-
-  
 }
