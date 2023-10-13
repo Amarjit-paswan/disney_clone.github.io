@@ -344,7 +344,7 @@ body{
 }
 
 
-@media (max-width:768px){
+@media (max-width:992px){
   
 
     .sliderBox{
@@ -373,7 +373,7 @@ body{
         margin: auto;
         height: 10vw;
         display: grid;
-        grid-template-columns: repeat(6,125px);
+        grid-template-columns: repeat(6,145px);
         gap: 1px;
         margin-bottom: 20px;
         justify-content: space-between;
@@ -382,7 +382,7 @@ body{
     .video-card{
         position: relative;
      
-        width: 120px;
+        width: 150px;
         height: 80px;
         border-radius: 5%;
         overflow: hidden;
